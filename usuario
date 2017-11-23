@@ -1,0 +1,49 @@
+<?php
+
+require_once 'conexao.classe.php';
+require_once 'funcoes.php';
+
+class usuarios {
+   private $con;
+   private $objfunc;
+   private $idUsuario;
+   private $name;
+   private $senha;
+   private $email;
+   private $dataCadastro;
+   
+   public function __construct() {
+       $this->con = new conexao();
+       $this->objfunc = new Funcoes();
+     }
+     public function __set($atributo, $valor) {
+         $this->atributo = $valor;
+     }
+     public function __get($atributo) {
+         return $this->atributo;
+        }
+        public function querySeleciona($dado) {
+            try{
+                
+            } catch (PDOExceptionException $ex) {
+
+            }
+            
+        }
+        public function queryInsert($dados) {
+            try{
+                
+            } catch (PDOExceptionException $ex) {
+
+            }
+            
+        }
+          public function queryUpdate($dados) {
+              try{
+                  
+              } catch (PDOException $ex) {
+
+              }
+          }
+        }
+?>
