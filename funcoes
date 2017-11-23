@@ -1,0 +1,15 @@
+<?php
+
+class funcoes {
+    public function tratarCaracter($vlr, $tiipo){
+        
+        }
+    public function dataAtual($tipo) {
+    
+            }
+
+    public function base64() {
+            
+                }   
+}
+?>
