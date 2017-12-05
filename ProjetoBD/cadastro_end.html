@@ -70,6 +70,10 @@
                 <form action = "cadastrar_end.php" method ="post">
                     <table cellspacing=2 cellpadding=6>
                         <tr>
+                            <td class="text-heading">ISBN:</td>
+                            <td><input type="text" name="isbn" size="40" pattern="[0-9]{9}" class="form-control" required></td>
+                        </tr>
+                        <tr>
                             <td class="text-heading">Titulo:</td>
                             <td><input type="text" name="titulo" size="40" class="form-control" required></td>
                         </tr>
@@ -78,19 +82,20 @@
                             <td><input type="text" name="numero_da_edicao" size="40" class="form-control" required></td>
                         </tr>
                         <tr>
-                            <td class="text-heading">Data da Compra:  </td> 
-                            <td><input type="text" name="data_compra" size="40" class="form-control" required></td>
+                            <td class="text-heading">Data da Compra:</td> 
+                            <td><input type="date" name="data_compra" pattern="[0-9]{8}"
+                              title="AAAAMMDD" size="40" class="form-control" required></td>
                         </tr>
                         <tr>
-                            <td class="text-heading">Editora:         </td>
+                            <td class="text-heading">Editora:</td>
                             <td><input type="text" name="editora" size="40" class="form-control" required></td>
                         </tr>
                         <tr>
-                            <td class="text-heading">Idioma          :</td>
+                            <td class="text-heading">Idioma:</td>
                             <td><input type="text" name="Idioma" size="40" class="form-control" required></td>
                         </tr>
                         <tr>
-                            <td class="text-heading">Ano             :</td>
+                            <td class="text-heading">Ano:</td>
                             <td><input type="text" name="ano" size="40" class="form-control" required></td>
                         </tr>
                         <tr>

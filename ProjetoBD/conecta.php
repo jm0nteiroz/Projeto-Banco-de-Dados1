@@ -4,7 +4,7 @@ class Conexao
 {
 	 public static $servername = "localhost:3306";
 	 public static $username = "root";
-	 public static $password = "Damasceno123";
+	 public static $password = "";
 	 public static $db = "mydb";
 	
 

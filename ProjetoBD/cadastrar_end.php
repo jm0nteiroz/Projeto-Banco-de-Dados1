@@ -8,9 +8,10 @@
 	}
 	echo "Connected Successfully";
 
-	$Titulo = $Numero_Edicao = $Editora = $Ano = $Data = $Idioma ="";
+	$ISBN = $Titulo = $Numero_Edicao = $Editora = $Ano = $Data = $Idioma ="";
 
 	if ($_SERVER["REQUEST_METHOD"] == "POST") {
+		$ISBN = $_POST["ISBN"];
 	 	$Titulo = $_POST["Titulo"];
 		$Numero_Edicao = $_POST["Numero_Edicao"];
 	  	$Editora = $_POST["Editora"];
@@ -19,14 +20,22 @@
 	  	$Idioma = $_POST["Idioma"];
 	}
 
+	$sql = "INSERT INTO LIVRO (ISBN, Titulo, DataCompra)
+			VALUES (
+					'".$_POST["isbn"]."',
+					'".$_POST["titulo"]."',
+					'".$_POST["data"]."')";
+	if (mysqli_query($conn, $sql)) {
+    	echo "New record created successfully";
+	} else {
+    	echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+	}
 
-	$sql = "INSERT INTO Gibis (Titulo, Numero_Edicao, Editora, Ano, Data, Idioma)
-			VALUES ('".$_POST["Titulo"]."',
-					'".$_POST["	Numero_Edicao"]."',
-					'".$_POST["Editora"]."',
-					'".$_POST["Ano"]."',
-					'".$_POST["Data"]."',
-					'".$_POST["Idioma"]."')";
+	$sql = "INSERT INTO EDICAO (ISBN, Edicao, Ano)
+			VALUES (
+					'".$_POST["isbn"]."',
+					'".$_POST["numero_da_edicao"]."',
+					'".$_POST["ano"]."')";
 	if (mysqli_query($conn, $sql)) {
     	echo "New record created successfully";
 	} else {
